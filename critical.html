@@ -1,0 +1,33 @@
+---
+layout: default
+title: Critical Alerts
+permalink: /critical/
+---
+
+<div class="page-header">
+  <h1>🔴 Critical Alerts</h1>
+  <p>High-priority security incidents requiring immediate attention</p>
+</div>
+
+<div class="news-grid">
+  {% assign critical_posts = site.posts | where: "severity", "critical" %}
+  {% for post in critical_posts %}
+  <article class="news-card">
+    <div class="news-card-image critical-bg">✈️</div>
+    <div class="news-card-body">
+      <div class="news-card-meta">
+        <span class="news-card-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <span class="severity-badge severity-critical">Critical</span>
+      </div>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="news-card-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+{% if critical_posts.size == 0 %}
+<div class="empty-state">
+  <p>No critical alerts at this time.</p>
+</div>
+{% endif %}

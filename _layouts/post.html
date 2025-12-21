@@ -1,0 +1,79 @@
+---
+layout: default
+---
+<article class="post">
+  {% if page.image %}
+  <figure class="post-hero-image">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  </figure>
+  {% endif %}
+
+  <header class="post-header">
+    <div class="post-meta">
+      <span class="news-card-date">{{ page.date | date: "%B %d, %Y" }}</span>
+      {% if page.severity %}
+      <span class="severity-badge severity-{{ page.severity }}">
+        {% case page.severity %}
+          {% when 'critical' %}🔴 Critical
+          {% when 'intel' %}🟡 Intel
+          {% when 'routine' %}🔵 Routine
+          {% else %}📰 News
+        {% endcase %}
+      </span>
+      {% endif %}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.countries %}
+    <div class="country-tags">
+      {% for country in page.countries %}
+      <span class="country-tag country-{{ country | downcase }}">
+        {% case country %}
+          {% when 'taiwan' %}🇹🇼 Taiwan
+          {% when 'china' %}🇨🇳 China
+          {% when 'us' %}🇺🇸 USA
+          {% when 'japan' %}🇯🇵 Japan
+          {% else %}{{ country }}
+        {% endcase %}
+      </span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% include social-share.html %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.sources %}
+  <aside class="sources-box">
+    <h3>Sources</h3>
+    <ul>
+      {% for source in page.sources %}
+      <li>
+        <a href="{{ source.url }}" target="_blank" rel="noopener">{{ source.title | default: source.url }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+
+  <footer class="post-footer">
+    {% include social-share.html %}
+    <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back to all news</a>
+  </footer>
+</article>
+
+<aside class="related-posts">
+  <h3>Related Articles</h3>
+  <div class="related-grid">
+    {% assign related = site.posts | where: "severity", page.severity | where_exp: "post", "post.url != page.url" | limit: 3 %}
+    {% for post in related %}
+    <a href="{{ post.url | relative_url }}" class="related-card">
+      <span class="related-date">{{ post.date | date: "%b %d" }}</span>
+      <span class="related-title">{{ post.title | truncate: 60 }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</aside>

@@ -57,6 +57,34 @@ a:hover {
   justify-content: space-between;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-site-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.main-site-link:hover {
+  background: var(--accent-blue);
+  color: white;
+}
+
+.back-arrow {
+  font-size: 1rem;
+}
+
 .logo {
   display: flex;
   align-items: center;

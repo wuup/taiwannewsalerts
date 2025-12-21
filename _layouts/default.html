@@ -13,16 +13,21 @@
 <body>
   <header class="header">
     <div class="header-inner">
-      <a href="{{ '/' | relative_url }}" class="logo">
-        <span class="logo-icon">⚡</span>
-        <span>Taiwan News Alerts</span>
-      </a>
+      <div class="header-left">
+        <a href="https://taiwaninvasionalerts.com" class="main-site-link">
+          <span class="back-arrow">&larr;</span>
+          <span>Main Site</span>
+        </a>
+        <a href="{{ '/' | relative_url }}" class="logo">
+          <span class="logo-icon">⚡</span>
+          <span>News</span>
+        </a>
+      </div>
       <nav class="nav">
         <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Latest</a>
         <a href="{{ '/critical/' | relative_url }}" {% if page.url contains '/critical' %}class="active"{% endif %}>Critical</a>
         <a href="{{ '/military/' | relative_url }}" {% if page.url contains '/military' %}class="active"{% endif %}>Military</a>
         <a href="{{ '/political/' | relative_url }}" {% if page.url contains '/political' %}class="active"{% endif %}>Political</a>
-        <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %}>About</a>
       </nav>
     </div>
   </header>

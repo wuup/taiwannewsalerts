@@ -1,7 +1,7 @@
-title: Taiwan News Alerts
+title: Taiwan Invasion Alerts News Feed
 description: Real-time security intelligence and news from the Taiwan Strait region
-url: "https://wuup.github.io"
-baseurl: "/taiwannewsalerts"
+url: "https://feed.taiwaninvasionalerts.com"
+baseurl: ""
 
 # Build settings
 markdown: kramdown

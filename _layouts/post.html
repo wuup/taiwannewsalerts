@@ -68,12 +68,15 @@ layout: default
 <aside class="related-posts">
   <h3>Related Articles</h3>
   <div class="related-grid">
-    {% assign related = site.posts | where: "severity", page.severity | where_exp: "post", "post.url != page.url" | limit: 3 %}
-    {% for post in related %}
-    <a href="{{ post.url | relative_url }}" class="related-card">
-      <span class="related-date">{{ post.date | date: "%b %d" }}</span>
-      <span class="related-title">{{ post.title | truncate: 60 }}</span>
-    </a>
+    {% assign count = 0 %}
+    {% for post in site.posts %}
+      {% if post.url != page.url and count < 3 %}
+        <a href="{{ post.url | relative_url }}" class="related-card">
+          <span class="related-date">{{ post.date | date: "%b %d" }}</span>
+          <span class="related-title">{{ post.title | truncate: 60 }}</span>
+        </a>
+        {% assign count = count | plus: 1 %}
+      {% endif %}
     {% endfor %}
   </div>
 </aside>

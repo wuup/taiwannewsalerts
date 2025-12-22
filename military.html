@@ -5,17 +5,23 @@ permalink: /military/
 ---
 
 <div class="page-header">
-  <h1>🎖️ Military Activity</h1>
+  <h1>Military Activity</h1>
   <p>Air, naval, and ground force operations in the Taiwan Strait region</p>
 </div>
 
 <div class="news-grid">
-  {% assign military_posts = site.posts | where_exp: "post", "post.type == 'air' or post.type == 'naval' or post.type == 'military' or post.type == 'armor'" %}
-  {% for post in military_posts %}
+  {% for post in site.posts %}
+  {% if post.type == 'air' or post.type == 'naval' or post.type == 'military' %}
   <article class="news-card">
+    {% if post.image %}
+    <div class="news-card-image has-image">
+      <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
+    </div>
+    {% else %}
     <div class="news-card-image">
       {% if post.type == 'air' %}✈️{% elsif post.type == 'naval' %}🚢{% else %}🎖️{% endif %}
     </div>
+    {% endif %}
     <div class="news-card-body">
       <div class="news-card-meta">
         <span class="news-card-date">{{ post.date | date: "%b %d, %Y" }}</span>
@@ -27,5 +33,6 @@ permalink: /military/
       <p class="news-card-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
     </div>
   </article>
+  {% endif %}
   {% endfor %}
 </div>

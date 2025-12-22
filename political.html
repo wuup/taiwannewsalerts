@@ -5,7 +5,7 @@ permalink: /political/
 ---
 
 <div class="page-header">
-  <h1>🏛️ Political Developments</h1>
+  <h1>Political Developments</h1>
   <p>Diplomatic relations, policy changes, and cross-strait politics</p>
 </div>
 
@@ -13,7 +13,13 @@ permalink: /political/
   {% assign political_posts = site.posts | where: "type", "political" %}
   {% for post in political_posts %}
   <article class="news-card">
+    {% if post.image %}
+    <div class="news-card-image has-image">
+      <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
+    </div>
+    {% else %}
     <div class="news-card-image">🏛️</div>
+    {% endif %}
     <div class="news-card-body">
       <div class="news-card-meta">
         <span class="news-card-date">{{ post.date | date: "%b %d, %Y" }}</span>
@@ -27,3 +33,9 @@ permalink: /political/
   </article>
   {% endfor %}
 </div>
+
+{% if political_posts.size == 0 %}
+<div class="empty-state">
+  <p>No political news at this time.</p>
+</div>
+{% endif %}

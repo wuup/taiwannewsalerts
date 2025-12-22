@@ -5,7 +5,7 @@ permalink: /critical/
 ---
 
 <div class="page-header">
-  <h1>🔴 Critical Alerts</h1>
+  <h1>Critical Alerts</h1>
   <p>High-priority security incidents requiring immediate attention</p>
 </div>
 
@@ -13,7 +13,13 @@ permalink: /critical/
   {% assign critical_posts = site.posts | where: "severity", "critical" %}
   {% for post in critical_posts %}
   <article class="news-card">
+    {% if post.image %}
+    <div class="news-card-image has-image">
+      <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
+    </div>
+    {% else %}
     <div class="news-card-image critical-bg">✈️</div>
+    {% endif %}
     <div class="news-card-body">
       <div class="news-card-meta">
         <span class="news-card-date">{{ post.date | date: "%b %d, %Y" }}</span>

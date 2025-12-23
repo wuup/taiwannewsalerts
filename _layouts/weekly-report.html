@@ -210,6 +210,7 @@ layout: default
 .weekly-report {
   max-width: 900px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .hero-image {
@@ -275,6 +276,7 @@ layout: default
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 .charts-section h2 {
@@ -288,6 +290,7 @@ layout: default
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-bottom: 1.5rem;
+  min-width: 0;
 }
 
 @media (max-width: 640px) {
@@ -300,6 +303,8 @@ layout: default
   background: var(--bg-primary, #0f172a);
   border-radius: 8px;
   padding: 1rem;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .chart-container h3 {

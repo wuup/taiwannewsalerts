@@ -1,0 +1,166 @@
+---
+layout: default
+title: Weekly Reports
+---
+
+<div class="weekly-reports">
+  <header class="page-header">
+    <h1>Weekly Intelligence Briefings</h1>
+    <p class="page-description">Comprehensive weekly analysis of Taiwan Strait security developments</p>
+  </header>
+
+  <div class="reports-grid">
+    {% assign weekly_posts = site.posts | where_exp: "post", "post.categories contains 'weekly'" %}
+    {% for post in weekly_posts %}
+    <article class="report-card">
+      {% if post.image %}
+      <a href="{{ post.url }}" class="report-image">
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+      </a>
+      {% endif %}
+      <div class="report-content">
+        <div class="report-meta">
+          <span class="week-badge">Week {{ post.week_number }}</span>
+          <span class="threat-level threat-{{ post.threat_level | downcase }}">{{ post.threat_level }}</span>
+        </div>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p class="date-range">{{ post.week_start }} - {{ post.week_end }}</p>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        <a href="{{ post.url }}" class="read-more">Read Full Report</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  {% if weekly_posts.size == 0 %}
+  <div class="no-reports">
+    <p>Weekly reports are published every Sunday. Check back soon for the latest intelligence briefing.</p>
+  </div>
+  {% endif %}
+</div>
+
+<style>
+.weekly-reports {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.reports-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.report-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+@media (max-width: 768px) {
+  .report-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.report-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.report-content {
+  padding: 1.5rem;
+}
+
+.report-meta {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.week-badge {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.threat-level {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.threat-high { background: #dc2626; color: white; }
+.threat-elevated { background: #f59e0b; color: black; }
+.threat-moderate { background: #3b82f6; color: white; }
+.threat-low { background: #22c55e; color: white; }
+
+.report-content h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.report-content h2 a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.report-content h2 a:hover {
+  color: var(--accent-color);
+}
+
+.date-range {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.excerpt {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.no-reports {
+  text-align: center;
+  padding: 3rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  color: var(--text-secondary);
+}
+</style>

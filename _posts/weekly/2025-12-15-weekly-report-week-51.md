@@ -99,7 +99,3 @@ The coming week is likely to see continued military and political maneuvering, w
 ## Outlook
 
 Continued monitoring of PLA activities and US-Taiwan military cooperation is essential. Potential for increased diplomatic engagements and strategic alignments in response to regional developments.
-
----
-
-*This report is automatically generated from Taiwan Invasion Alerts data. For real-time updates, visit [taiwaninvasionalerts.com](https://taiwaninvasionalerts.com).*

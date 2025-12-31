@@ -95,7 +95,3 @@ The coming week is likely to see continued military activity around Taiwan, with
 ## Outlook
 
 The situation in the Taiwan Strait remains tense with a high threat level due to continued military activities and diplomatic challenges. Vigilance over PLA maneuvers and international reactions will be essential in the coming week.
-
----
-
-*This report is automatically generated from Taiwan Invasion Alerts data. For real-time updates, visit [taiwaninvasionalerts.com](https://taiwaninvasionalerts.com).*

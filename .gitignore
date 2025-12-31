@@ -9,3 +9,4 @@ Gemfile.lock
 *.swo
 .DS_Store
 scripts/
+.venv/

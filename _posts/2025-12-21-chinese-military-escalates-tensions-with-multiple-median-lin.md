@@ -2,7 +2,7 @@
 layout: post
 title: "Chinese Military Escalates Tensions with Multiple Median Line Crossings in Taiwan Strait"
 date: 2025-12-21 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, naval, air, geopolitical, defense]

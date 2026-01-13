@@ -2,7 +2,7 @@
 layout: post
 title: "Chinese Aircraft Breach Taiwan Strait Median Line Amid Rising Regional Tensions"
 date: 2026-01-10 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, plan, taiwan-strait, incursion, regional-tensions]

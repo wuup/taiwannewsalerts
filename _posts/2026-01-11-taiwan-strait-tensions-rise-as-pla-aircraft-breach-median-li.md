@@ -2,7 +2,7 @@
 layout: post
 title: "Taiwan Strait Tensions Rise as PLA Aircraft Breach Median Line for Third Consecutive Day"
 date: 2026-01-11 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, plan, taiwan-strait, escalation, military-posturing]

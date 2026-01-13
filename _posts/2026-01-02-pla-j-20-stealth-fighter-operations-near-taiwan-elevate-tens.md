@@ -2,7 +2,7 @@
 layout: post
 title: "PLA J-20 Stealth Fighter Operations Near Taiwan Elevate Tensions Amid Reunification Rhetoric"
 date: 2026-01-02 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us]
 tags: [pla, j-20, stealth, reunification, naval, air-defense]

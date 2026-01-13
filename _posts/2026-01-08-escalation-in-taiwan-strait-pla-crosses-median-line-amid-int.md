@@ -2,7 +2,7 @@
 layout: post
 title: "Escalation in Taiwan Strait: PLA Crosses Median Line Amid Intensified Military Drills"
 date: 2026-01-08 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, japan, us]
 tags: [adiz, median-line, pla, naval-drills, air-incursions, political-tensions]

@@ -2,7 +2,7 @@
 layout: post
 title: "Escalation in Taiwan Strait: PLA Aircraft and Carrier Fujian Breach Median Line"
 date: 2025-12-17 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, fujian, carrier, cross-strait, defense]

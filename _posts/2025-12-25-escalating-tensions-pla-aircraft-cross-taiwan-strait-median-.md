@@ -2,7 +2,7 @@
 layout: post
 title: "Escalating Tensions: PLA Aircraft Cross Taiwan Strait Median Amid Doubling Military Activities"
 date: 2025-12-25 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, plan, cross-strait, military-drill, abrams-tanks]

@@ -2,7 +2,7 @@
 layout: post
 title: "China's New Stealth Drone Flight Heightens Tensions Amid Taiwan Strait Incursions"
 date: 2025-12-15 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, ch-7, drone, m1a2t, taiwan-strait, japan-diplomacy]

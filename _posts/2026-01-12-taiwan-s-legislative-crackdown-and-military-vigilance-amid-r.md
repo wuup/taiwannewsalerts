@@ -2,7 +2,7 @@
 layout: post
 title: "Taiwan's Legislative Crackdown and Military Vigilance Amid Rising Tensions in the Strait"
 date: 2026-01-12 23:59:00 +0800
-severity: critical
+severity: intel
 type: political
 countries: [taiwan, china, us, japan]
 tags: [anti-infiltration, pla, adiz, f-16, naval, balloons]

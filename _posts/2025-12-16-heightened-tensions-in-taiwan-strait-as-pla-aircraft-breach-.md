@@ -2,7 +2,7 @@
 layout: post
 title: "Heightened Tensions in Taiwan Strait as PLA Aircraft Breach Median Line, US Bolsters Regional Deterrence"
 date: 2025-12-16 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, first-island-chain, deterrence, us-military-posture]

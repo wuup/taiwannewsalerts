@@ -2,7 +2,7 @@
 layout: post
 title: "Japan's Military Shift and Large-Scale PLA Drills Escalate Tensions in Taiwan Strait"
 date: 2025-12-31 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, japan, us]
 tags: [adiz, median-line, pla, military-exercises, japan-defense]

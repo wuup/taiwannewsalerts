@@ -2,7 +2,7 @@
 layout: post
 title: "China Sanctions US Defense Firms Amid Escalating Arms Sales to Taiwan"
 date: 2025-12-26 23:59:00 +0800
-severity: critical
+severity: intel
 type: political
 countries: [taiwan, china, us, japan]
 tags: [arms-sale, sanctions, pla, defense-budget]

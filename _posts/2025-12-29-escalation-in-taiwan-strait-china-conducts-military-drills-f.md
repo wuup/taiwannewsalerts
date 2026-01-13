@@ -2,7 +2,7 @@
 layout: post
 title: "Escalation in Taiwan Strait: China Conducts Military Drills Following Major US Arms Sale to Taiwan"
 date: 2025-12-29 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [pla, military-exercises, arms-sale, t-dome, cross-strait-relations]

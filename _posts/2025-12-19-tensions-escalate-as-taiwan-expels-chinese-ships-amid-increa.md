@@ -2,7 +2,7 @@
 layout: post
 title: "Tensions Escalate as Taiwan Expels Chinese Ships Amid Increased PLA Activity"
 date: 2025-12-19 23:59:00 +0800
-severity: critical
+severity: intel
 type: naval
 countries: [taiwan, china, us]
 tags: [pla, grey-zone, kinmen, us-defense-policy, cross-strait-relations]

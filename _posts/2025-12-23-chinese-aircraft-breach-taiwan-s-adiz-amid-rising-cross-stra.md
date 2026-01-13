@@ -2,7 +2,7 @@
 layout: post
 title: "Chinese Aircraft Breach Taiwan's ADIZ Amid Rising Cross-Strait Tensions"
 date: 2025-12-23 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, plan, taiwan-strait, cross-strait-tensions]

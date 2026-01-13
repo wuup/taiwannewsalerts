@@ -2,7 +2,7 @@
 layout: post
 title: "Escalation in Taiwan Strait: PLA Aircraft Breach Median Line Amid Rising Regional Tensions"
 date: 2025-12-27 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, japan]
 tags: [adiz, median-line, pla, defense-budget, cross-strait]

@@ -2,7 +2,7 @@
 layout: post
 title: "Beijing's Protest Against Japanese Lawmakers' Taiwan Visit Heightens Regional Tensions"
 date: 2025-12-22 23:59:00 +0800
-severity: critical
+severity: intel
 type: political
 countries: [taiwan, china, japan]
 tags: [diplomatic-protest, pla, plan, japan-taiwan-relations]

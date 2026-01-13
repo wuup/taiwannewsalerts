@@ -2,7 +2,7 @@
 layout: post
 title: "Escalation in Taiwan Strait: PLA Forces Cross Median Line and Surge in Cyberattacks"
 date: 2026-01-05 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, cyberattacks, nsb]

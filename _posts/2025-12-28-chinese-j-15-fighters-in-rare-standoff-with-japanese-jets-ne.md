@@ -2,7 +2,7 @@
 layout: post
 title: "Chinese J-15 Fighters in Rare Standoff with Japanese Jets Near Taiwan Strait"
 date: 2025-12-28 23:59:00 +0800
-severity: critical
+severity: intel
 type: air
 countries: [taiwan, china, japan]
 tags: [miyako-strait, pla, carrier-operations, regional-tensions]

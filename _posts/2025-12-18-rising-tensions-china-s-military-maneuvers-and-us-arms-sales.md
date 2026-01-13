@@ -2,7 +2,7 @@
 layout: post
 title: "Rising Tensions: China's Military Maneuvers and US Arms Sales Stir Taiwan Strait Dynamics"
 date: 2025-12-18 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, arms-sale, nuclear-policy, regional-security]

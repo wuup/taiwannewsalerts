@@ -2,7 +2,7 @@
 layout: post
 title: "Escalation in Taiwan Strait: PLA Forces Cross Median Line as F-16 Pilot Search Underway"
 date: 2026-01-07 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, f-16, strait-tensions, search-rescue]

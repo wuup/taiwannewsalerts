@@ -2,7 +2,7 @@
 layout: post
 title: "PLA Aircraft Breach Median Line Amidst Holiday Tensions in Taiwan Strait"
 date: 2025-12-24 23:59:00 +0800
-severity: critical
+severity: intel
 type: military
 countries: [taiwan, china, us, japan]
 tags: [adiz, median-line, pla, taiwan-strait, kmt, us-intervention]

@@ -45,6 +45,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-sitemap
 
 # Analytics (optional)
 # google_analytics: UA-XXXXXXXX-X

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://feed.taiwaninvasionalerts.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin/system paths
+Disallow: /assets/
+Disallow: /*.json$

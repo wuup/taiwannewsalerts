@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+  <meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+
+  <!-- Open Graph / Facebook -->
+  <!-- Canonical URL -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:title" content="{{ page.title | default: site.title }}">
-  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 200 }}">
+  <meta property="og:description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | truncate: 200 }}">
+  {% if page.date %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  {% endif %}
   {% if page.image %}
   <meta property="og:image" content="{{ page.image | absolute_url }}">
   <meta property="og:image:width" content="1792">
@@ -22,7 +29,7 @@
   <meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
   <meta name="twitter:site" content="@{{ site.twitter }}">
   <meta name="twitter:title" content="{{ page.title | default: site.title }}">
-  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 200 }}">
+  <meta name="twitter:description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | truncate: 200 }}">
   {% if page.image %}
   <meta name="twitter:image" content="{{ page.image | absolute_url }}">
   {% endif %}
@@ -31,6 +38,44 @@
   <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
   {% feed_meta %}
   {% seo %}
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{% if page.date %}NewsArticle{% else %}WebSite{% endif %}",
+    {% if page.date %}
+    "headline": "{{ page.title | escape }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.date | date_to_xmlschema }}",
+    "author": {
+      "@type": "Organization",
+      "name": "Taiwan Invasion Alerts"
+    },
+    {% if page.image %}
+    "image": "{{ page.image | absolute_url }}",
+    {% endif %}
+    "publisher": {
+      "@type": "Organization",
+      "name": "Taiwan Invasion Alerts",
+      "url": "https://taiwaninvasionalerts.com"
+    },
+    "description": "{{ page.excerpt | default: site.description | strip_html | truncate: 200 | escape }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }
+    {% else %}
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "description": "{{ site.description | escape }}",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Taiwan Invasion Alerts"
+    }
+    {% endif %}
+  }
+  </script>
 </head>
 <body>
   <header class="header">
